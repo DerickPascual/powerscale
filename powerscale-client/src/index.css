@@ -1,6 +1,11 @@
+@import '@fontsource/oswald/index.css'; /* Defaults to weight 400 */
+@import '@fontsource/oswald/700.css'; /* Weight 700 */
+@import '@fontsource/oswald/500.css'; /* Weight 500 */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;

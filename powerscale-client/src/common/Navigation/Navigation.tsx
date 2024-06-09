@@ -11,6 +11,7 @@ export default function Navigation() {
     const location = useLocation();
     const pathname = location.pathname;
 
+    /* Set selected page on initial render */
     const [selectedPage, setSelectedPage] = useState(() => {
         if (pathname === "/" || pathname === "/powerscale") {
             return "Power Scaler";

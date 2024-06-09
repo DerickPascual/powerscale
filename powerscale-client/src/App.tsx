@@ -10,7 +10,7 @@ function App() {
       <Header />
       <div className='flex'>
         <Navigation />
-        <div className='p-2'>
+        <div className="w-full">
           <Outlet />
         </div>
       </div>

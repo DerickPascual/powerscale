@@ -7,10 +7,20 @@ export default {
   theme: {
     extend: {
       fontWeight: {
-        'extra-light': 200
+        'extra-light': 200,
+        '500': 500
       },
       colors: {
         'yellow-select': '#F2BF43',
+      },
+      fontFamily: {
+        'oswald': ['Oswald', 'sans-serif'],
+      },
+      fontSize: {
+        '24px': '24px',
+      },
+      boxShadow: {
+        'sex-card': '0px 2px 10px 0px rgba(0, 0, 0, 0.25)'
       }
     },
   },
