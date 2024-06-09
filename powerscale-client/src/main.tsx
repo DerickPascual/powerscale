@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import PowerScaler from './pages/PowerScaler/PowerScaler.tsx';
 import Header from './common/Header/Header.tsx';
+import Navigation from './common/Navigation/Navigation.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,9 +18,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <div>
-      <Header />
-      <RouterProvider router={router}/>
-    </div>
+    <Header />
+    <RouterProvider router={router}/>
   </React.StrictMode>,
 )
