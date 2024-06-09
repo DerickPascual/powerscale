@@ -8,6 +8,9 @@ export default {
     extend: {
       fontWeight: {
         'extra-light': 200
+      },
+      colors: {
+        'yellow-select': '#F2BF43',
       }
     },
   },

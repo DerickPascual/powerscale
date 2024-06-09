@@ -5,20 +5,33 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom';
+import App from './App.tsx';
 import PowerScaler from './pages/PowerScaler/PowerScaler.tsx';
-import Header from './common/Header/Header.tsx';
-import Navigation from './common/Navigation/Navigation.tsx';
+import Faq from './pages/Faq/Faq.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PowerScaler />
+    element: <App />,
+    children: [
+      {
+        path: "",
+        element: <PowerScaler />
+      },
+      {
+        path: "powerscale",
+        element: <PowerScaler />
+      },
+      {
+        path: "/faq",
+        element: <Faq />
+      }
+    ]
   },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Header />
     <RouterProvider router={router}/>
   </React.StrictMode>,
 )
