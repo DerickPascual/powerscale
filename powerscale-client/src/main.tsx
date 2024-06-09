@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -12,12 +11,8 @@ import Header from './common/Header/Header.tsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
-  },
-  {
-    path: '/powerscale',
     element: <PowerScaler />
-  }
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
