@@ -32,15 +32,18 @@ const WeightInput: FC<WeightInput> = ({ icon, whiteIcon, value, setValue, field,
                     className="h-6"
                 />
             </div>
-            <input 
-                type="text"
-                placeholder={`${field} (${units})`}
-                className="w-36 h-10 weight-input border border-[#382F66] bg-[#211D41]  rounded-tr-6px rounded-br-6px p-2 text-[#B3B4D0] focus:text-[#ffffff] font-semibold text-15px"
-                value={value}
-                onChange={handleInputChange}
-                onFocus={() => setInputFocused(true)}
-                onBlur={() => setInputFocused(false)}
-            />
+            <div className="relative">
+                <input 
+                    type="text"
+                    placeholder={`${field} (${units})`}
+                    className="w-36 h-10 weight-input border border-[#382F66] bg-[#211D41]  rounded-tr-6px rounded-br-6px p-2 text-[#B3B4D0] focus:text-[#ffffff] font-semibold text-15px"
+                    value={value}
+                    onChange={handleInputChange}
+                    onFocus={() => setInputFocused(true)}
+                    onBlur={() => setInputFocused(false)}
+                />
+                <span className={`absolute right-3 top-1/2 transform -translate-y-1/2 ${inputFocused ? 'text-[#ffffff]' : 'text-[#B3B4D0]'} font-semibold text-15px`}>{value && ` ${units}`}</span>
+            </div>
         </div>
     );
 }
