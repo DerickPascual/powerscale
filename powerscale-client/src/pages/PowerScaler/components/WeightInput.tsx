@@ -1,17 +1,24 @@
-import { FC, useState } from "react";
+import { FC, useState, ChangeEvent } from "react";
 import "./WeightInput.css";
 
 interface WeightInput {
     icon: any;
     whiteIcon: any;
+    value: string;
+    setValue: any;
     field: string;
     units: string;
 }
 
-const WeightInput: FC<WeightInput> = ({ icon, whiteIcon, field, units }) => {
+const WeightInput: FC<WeightInput> = ({ icon, whiteIcon, value, setValue, field, units }) => {
     const [inputFocused, setInputFocused] = useState(false);
 
-    
+    /* Guarantee that input is composed of digits */
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+        if (/^\d*$/.test(e.target.value)) {
+            setValue(e.target.value);
+        }
+    }
 
     return (
         <div
@@ -29,6 +36,8 @@ const WeightInput: FC<WeightInput> = ({ icon, whiteIcon, field, units }) => {
                 type="text"
                 placeholder={`${field} (${units})`}
                 className="w-36 h-10 weight-input border border-[#382F66] bg-[#211D41]  rounded-tr-6px rounded-br-6px p-2 text-[#B3B4D0] focus:text-[#ffffff] font-semibold text-15px"
+                value={value}
+                onChange={handleInputChange}
                 onFocus={() => setInputFocused(true)}
                 onBlur={() => setInputFocused(false)}
             />

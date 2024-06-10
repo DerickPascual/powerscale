@@ -25,7 +25,8 @@ export default {
         'weight-input': '0px 2px 10px 0px rgba(0, 0, 0, 0.25)'
       },
       borderRadius: {
-        '6px': '6px'
+        '6px': '6px',
+        '10px': '10px'
       }
     },
   },
