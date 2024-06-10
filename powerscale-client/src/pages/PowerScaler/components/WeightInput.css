@@ -1,0 +1,11 @@
+.weight-input::placeholder {
+    color: #B3B4D0;
+}
+
+.weight-input:focus {
+    outline: none;
+}
+
+.weight-input-container:focus-within {
+    outline: 1px solid #F2BF43;
+}

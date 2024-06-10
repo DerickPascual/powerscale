@@ -17,10 +17,15 @@ export default {
         'oswald': ['Oswald', 'sans-serif'],
       },
       fontSize: {
+        '15px': '15px',
         '24px': '24px',
       },
       boxShadow: {
-        'sex-card': '0px 2px 10px 0px rgba(0, 0, 0, 0.25)'
+        'sex-card': '0px 2px 10px 0px rgba(0, 0, 0, 0.25)',
+        'weight-input': '0px 2px 10px 0px rgba(0, 0, 0, 0.25)'
+      },
+      borderRadius: {
+        '6px': '6px'
       }
     },
   },
