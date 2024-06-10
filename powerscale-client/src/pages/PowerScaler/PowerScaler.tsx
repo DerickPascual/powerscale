@@ -6,9 +6,13 @@ import settImg from "../../assets/sett.jpg";
 import femaleIcon from "../../assets/femenine.png";
 import viImg from "../../assets/vi.png";
 import weightScaleIcon from "../../assets/weight-scale.png";
+import weightScaleIconWhite from "../../assets/weight-scale-white.png";
 import squatIcon from "../../assets/squat.png";
+import squatIconWhite from "../../assets/squat-white.png";
 import benchIcon from "../../assets/bench.png";
+import benchIconWhite from "../../assets/bench-white.png";
 import deadIcon from "../../assets/deadlift.png";
+import deadIconWhite from "../../assets/deadlift-white.png";
 import powerScaleBackground from "../../assets/powerscale-bg.png";
 
 export default function PowerScaler() {
@@ -37,10 +41,10 @@ export default function PowerScaler() {
             <div
                 className="flex flex-col space-y-4"
             >
-                <WeightInput icon={weightScaleIcon} field={"Bodyweight"} units={selectedUnits} />
-                <WeightInput icon={squatIcon} field={"Squat"} units={selectedUnits} />
-                <WeightInput icon={benchIcon} field={"Bench Press"} units={selectedUnits} />
-                <WeightInput icon={deadIcon} field={"Deadlift"} units={selectedUnits} />
+                <WeightInput icon={weightScaleIcon} whiteIcon={weightScaleIconWhite}field={"Bodyweight"} units={selectedUnits} />
+                <WeightInput icon={squatIcon} whiteIcon={squatIconWhite} field={"Squat"} units={selectedUnits} />
+                <WeightInput icon={benchIcon} whiteIcon={benchIconWhite} field={"Bench Press"} units={selectedUnits} />
+                <WeightInput icon={deadIcon} whiteIcon={deadIconWhite} field={"Deadlift"} units={selectedUnits} />
             </div>
         </div>
     );
