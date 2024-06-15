@@ -36,7 +36,7 @@ const WeightInput: FC<WeightInput> = ({ icon, whiteIcon, value, setValue, field,
                 <input 
                     type="text"
                     placeholder={`${field} (${units})`}
-                    className="w-36 h-10 weight-input border border-[#382F66] bg-[#211D41]  rounded-tr-6px rounded-br-6px p-2 text-[#B3B4D0] focus:text-[#ffffff] font-semibold text-15px"
+                    className="w-36 h-10 weight-input border border-[#382F66] bg-[#211D41]  rounded-tr-6px rounded-br-6px p-2 text-[#ffffff] focus:text-[#ffffff] font-semibold text-15px"
                     value={value}
                     onChange={handleInputChange}
                     onFocus={() => setInputFocused(true)}

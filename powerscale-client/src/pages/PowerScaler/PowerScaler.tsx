@@ -2,6 +2,8 @@ import { useState } from 'react';
 import SexCard from "./components/SexCard";
 import WeightInput from "./components/WeightInput";
 import UnitSelect from "./components/UnitSelect";
+import AgeSelect from "./components/AgeSelect";
+import YellowButton from './components/YellowButton';
 import maleIcon from "../../assets/male-gender.png";
 import settImg from "../../assets/sett.jpg";
 import femaleIcon from "../../assets/femenine.png";
@@ -19,6 +21,7 @@ import powerScaleBackground from "../../assets/powerscale-bg.png";
 export default function PowerScaler() {
     const [selectedSex, setSelectedSex] = useState("");
     const [selectedUnit, setSelectedUnit] = useState("kg");
+    const [ageCategory, setAgeCategory] = useState<string>('');
     const [bodyweight, setBodyweight] = useState<string>('');
     const [squat, setSquat] = useState<string>('');
     const [bench, setBench] = useState<string>('');
@@ -30,7 +33,7 @@ export default function PowerScaler() {
             style={{ backgroundImage: `url(${powerScaleBackground})` }}
         >
             <p className="font-oswald text-xl font-500 text-24px mb-2">
-                DISCOVER WHERE YOU STRENGTH RANKS IN THE LEAGUE OF LIFTERS.
+                DISCOVER WHERE YOU STRENGTH RANKS.
             </p>
             <p className="text-[#B3B4D0] mb-5">
                 Find out how your SBD stacks up against <span className="text-[#F2BF43]">1,234,567 others</span>.
@@ -46,22 +49,26 @@ export default function PowerScaler() {
             <div
                 className="flex flex-col space-y-5"
             >
-                <div>
-                    <UnitSelect 
+                <div className="flex space-x-6">
+                    <AgeSelect 
+                        ageCategory={ageCategory}
+                        setAgeCategory={setAgeCategory}
+                    />
+                    <WeightInput
+                        icon={weightScaleIcon}
+                        whiteIcon={weightScaleIconWhite}
+                        field={"Bodyweight"}
+                        value={bodyweight}
+                        setValue={setBodyweight}
+                        units={selectedUnit}
+                    />
+                    <UnitSelect
                         selectedUnit={selectedUnit}
                         setSelectedUnit={setSelectedUnit}
                     />
                 </div>
-                <WeightInput
-                    icon={weightScaleIcon}
-                    whiteIcon={weightScaleIconWhite}
-                    field={"Bodyweight"}
-                    value={bodyweight}
-                    setValue={setBodyweight}
-                    units={selectedUnit}
-                />
                 <div
-                    className="flex space-x-4"
+                    className="flex space-x-6"
                 >
                     <WeightInput
                         icon={squatIcon}
@@ -88,6 +95,12 @@ export default function PowerScaler() {
                         setValue={setDead}
                     />
                 </div>
+            </div>
+            <div className="mt-8">
+                <YellowButton 
+                    text={"CALCULATE STRENGTH LEVEL"} 
+                    onClick={() => {}}
+                />
             </div>
         </div>
     );

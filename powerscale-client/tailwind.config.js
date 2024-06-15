@@ -18,6 +18,7 @@ export default {
       },
       fontSize: {
         '15px': '15px',
+        '16px': '16px',
         '24px': '24px',
       },
       boxShadow: {
